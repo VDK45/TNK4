@@ -17,6 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from khoahoc.views import *
+from django.urls import path, include
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('khoahoc.urls')),
+    # path('', index),
+    # path('course/', course),
+    # path('class/', cabinet),
 ]
